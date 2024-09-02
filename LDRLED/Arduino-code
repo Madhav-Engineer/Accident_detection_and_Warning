@@ -1,1 +1,30 @@
+int ldrPin=2;     
+int led=12;
+int led2=11;
+int led3=13;
+void setup() {
+  pinMode(ldrPin, INPUT);
+  pinMode(led, OUTPUT);
+  pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
+  Serial.begin(9600);
+}
 
+void loop() {  
+int ldrValue = digitalRead(ldrPin);
+ if (ldrValue==1)
+ {
+  digitalWrite(led,HIGH);
+  digitalWrite(led2,HIGH);
+  digitalWrite(led3,HIGH);
+  
+ }
+ else
+ {
+  digitalWrite(led,LOW);
+  digitalWrite(led2,LOW);
+  digitalWrite(led3,LOW);
+  
+ }
+ 
+}
